@@ -21,6 +21,11 @@ class ConversationDataSource {
     /// The Message at a specific point in the conversation
     func messageAt(index: Int) -> Message {
         print("Asked for message at index \(index)")
-        return Message(date: Date(), text: "Hello, world!", type: .answer)
+        
+        if index % 2 == 0 {
+            return Message(date: Date(), text: "Question \(index / 2)", type: .question)
+        } else {
+            return Message(date: Date(), text: "Answer \(index / 2)", type: .answer)
+        }
     }
 }
