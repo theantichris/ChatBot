@@ -5,6 +5,8 @@ struct ConversationDelegate {
         
         if lowerQuestion.hasPrefix("hello") {
             return "Why, hello there!"
+        } else if lowerQuestion == "butts" {
+            return "LMAO!"
         } else if lowerQuestion == "where are the cookies?" {
             return "In the cookie jar!"
         } else if lowerQuestion.hasPrefix("where") {
